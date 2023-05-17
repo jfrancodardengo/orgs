@@ -3,7 +3,6 @@ import {Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import Estrelas from '../../../componentes/Estrelas';
 
 const distanciaEmMetros = distancia => {
-  console.log('distanciaEmMetros');
   return `${distancia}m`;
 };
 
