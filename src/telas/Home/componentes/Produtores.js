@@ -1,18 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {FlatList, StyleSheet, Text} from 'react-native';
 
-import {carregaProdutores} from '../../../servicos/carregaDados';
+import useProdutores from '../../../hooks/useProdutores';
 import Produtor from './Produtor';
 
 function Produtores({topo: Topo}) {
-  const [titulo, setTitutlo] = useState('');
-  const [lista, setLista] = useState([]);
-
-  useEffect(() => {
-    const retorno = carregaProdutores();
-    setTitutlo(retorno.titulo);
-    setLista(retorno.lista);
-  }, []);
+  const [titulo, lista] = useProdutores();
 
   const TopoLista = () => {
     return (
